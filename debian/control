@@ -1,0 +1,13 @@
+Source: containerd-cgroups
+Section: admin
+Priority: optional
+Maintainer: Enrico Weigelt <info@metux.net>
+Build-Depends: debhelper (>=11~), golang-any (>=1.18), libbtrfs-dev, go-md2man
+Standards-Version: 4.1.4
+
+Package: containerd-cgroups
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}, runc
+Description: container management engine used eg by docker or kubernetes
+ This is the containerd container management engine that grew out of docker

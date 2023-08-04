@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export PREFIX=/usr
+export GO_BUILDTAGS=no_systemd
+export GO_BUILD_FLAGS=-buildvcs=false
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	: # do nothing
+
+override_dh_auto_install:
+	dh_auto_install -- install install-man
